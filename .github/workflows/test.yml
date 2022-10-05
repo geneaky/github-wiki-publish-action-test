@@ -19,4 +19,4 @@ jobs:
         with:
           path: "/github-wiki-publish-action-test/test/wiki.txt"
         env:
-          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.bookchat-publish-wiki-token  }}
+          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN  }}
