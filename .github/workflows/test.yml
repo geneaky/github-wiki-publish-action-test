@@ -2,7 +2,6 @@ name: auto-publish-to-wiki
 on:
   push:
     branches: [ "master" ]
-    paths: ["wiki/**"]
   pull_request:
     branches: [ "master" ]
 
@@ -16,9 +15,11 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-      - uses: jcbhmr/copy-wiki-action@v1
+      - uses: ineshbose/wiki-action@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WIKI_DIR: 'wiki'
+          AUTO_SIDEBAR: true
         
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
