@@ -15,11 +15,13 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-      - uses: ineshbose/wiki-action@v1
+      - uses: joeizzard/action-wiki-sync@master
         with:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WIKI_DIR: './test/wiki'
-          AUTO_SIDEBAR: true
+          username: example
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+          wiki_folder: "./test"
+          commit_username: 'Example Name'
+          commit_email: 'kaktus418@gmail.com'
         
 #       - name: Upload Documentation to Wiki
 #         uses: SwiftDocOrg/github-wiki-publish-action@v1
