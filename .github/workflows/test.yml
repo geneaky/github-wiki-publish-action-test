@@ -21,3 +21,4 @@ jobs:
           path: "./test"
         env:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN  }}
+          WIKI_PAGE_NAME: "TEST"
