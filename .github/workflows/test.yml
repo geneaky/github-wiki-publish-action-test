@@ -15,6 +15,10 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
+      - uses: jcbhmr/copy-wiki-action@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
