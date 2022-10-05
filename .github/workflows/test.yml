@@ -2,6 +2,7 @@ name: auto-publish-to-wiki
 on:
   push:
     branches: [ "master" ]
+    paths: ["wiki/**"]
   pull_request:
     branches: [ "master" ]
 
