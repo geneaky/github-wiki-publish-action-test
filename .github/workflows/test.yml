@@ -18,7 +18,7 @@ jobs:
         run: echo Hello, world!
         
       - name: check
-        run: ls -al
+        run: cd test && ls -al
         shell: bash
         
       - name: Upload Documentation to Wiki
