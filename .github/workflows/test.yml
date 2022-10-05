@@ -18,7 +18,7 @@ jobs:
       - uses: ineshbose/wiki-action@v1
         with:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WIKI_DIR: 'wiki'
+          WIKI_DIR: '/test/wiki'
           AUTO_SIDEBAR: true
         
       - name: Upload Documentation to Wiki
