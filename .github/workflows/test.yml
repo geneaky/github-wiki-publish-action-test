@@ -17,10 +17,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-      - name: check
-        run: cd test && ls -al
-        shell: bash
-        
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
