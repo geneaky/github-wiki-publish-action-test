@@ -16,7 +16,7 @@ jobs:
         run: echo Hello, world!
   
       - name: Upload Documentation to Wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@v1
+        uses: geneaky/github-wiki-publish-action2@master
         with:
           path: "./test"
         env:
