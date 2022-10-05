@@ -1,31 +1,23 @@
-# name: auto-publish-to-wiki
-# on:
-#   push:
-#     branches: [ "master" ]
-#   pull_request:
-#     branches: [ "master" ]
+name: auto-publish-to-wiki
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
-#   workflow_dispatch:
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
       
-#     steps:
-#       - uses: actions/checkout@v3
-#       - name: Run a one-line script
-#         run: echo Hello, world!
-        
-#       - uses: joeizzard/action-wiki-sync@master
-#         with:
-#           username: example
-#           access_token: ${{ secrets.GITHUB_TOKEN }}
-#           wiki_folder: "./test"
-#           commit_username: 'Example Name'
-#           commit_email: 'kaktus418@gmail.com'
-        
-#       - name: Upload Documentation to Wiki
-#         uses: SwiftDocOrg/github-wiki-publish-action@v1
-#         with:
-#           path: "./test"
-#         env:
-#           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN  }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+  
+      - name: Upload Documentation to Wiki
+        uses: SwiftDocOrg/github-wiki-publish-action@v1
+        with:
+          path: "./test"
+        env:
+          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN  }}
